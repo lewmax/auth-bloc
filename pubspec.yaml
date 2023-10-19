@@ -1,0 +1,93 @@
+name: notes_bloc
+description: A new Flutter project.
+publish_to: 'none' 
+version: 1.0.0+1
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  #Localization
+  flutter_localizations:
+    sdk: flutter
+  #State management
+  flutter_bloc: ^8.1.3
+  bloc_concurrency: ^0.2.2
+  #navigation
+  # go_router: ^11.1.3
+  #Auth
+  flutter_facebook_auth: ^6.0.2
+  google_sign_in: ^6.1.5
+  #Firebase
+  firebase_core: ^2.17.0
+  firebase_auth: ^4.10.1
+  firebase_messaging: ^14.6.9
+  #network
+  dio: ^5.3.3
+  #code generation
+  freezed: ^2.4.3
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.8.1
+  enum_annotation: ^0.0.4
+  #comparing objects
+  equatable: ^2.0.5
+  #local db
+  shared_preferences: ^2.2.1
+  #ui
+  flutter_screenutil: ^5.9.0
+  flutter_svg: ^2.0.7
+  flutter_keyboard_visibility: ^5.4.1
+  pinput: ^3.0.1
+  countries_utils: ^1.0.1
+  keyboard_actions: ^4.2.0
+  mask_text_input_formatter: ^2.5.0
+  overlay_dialog: ^0.2.2
+  #other
+  async: ^2.11.0
+  intl: ^0.18.1
+  logger: ^2.0.2+1
+  jwt_decoder: ^2.0.1
+  image_picker: ^1.0.4
+  app_settings: ^5.0.0
+  cupertino_icons: ^1.0.6
+  package_info_plus: ^4.1.0
+
+dev_dependencies:
+  json_serializable: ^6.7.1
+  enum_generator: ^1.1.1
+  build_runner:
+  flutter_gen_runner:
+  #linter
+  dart_code_metrics:
+    git:
+      url: https://github.com/dart-code-checker/dart-code-metrics.git
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icons/
+    - assets/images/
+  fonts:
+    - family: OakSans
+      fonts:
+        - asset: fonts/OakSans-Light.ttf
+          weight: 300
+        - asset: fonts/OakSans-Regular.ttf
+          weight: 400
+        - asset: fonts/OakSans-SemiBold.ttf
+          weight: 600
+        - asset: fonts/OakSans-Bold.ttf
+          weight: 700
+
+#localization (1) install intl extension (2) 'Ctrl + S' to update intl.arb
+flutter_intl:
+  enabled: true
+
+#assets generator (1) 'dart pub global activate flutter_gen' (2) 'fluttergen -c pubspec.yaml' to generate
+flutter_gen:
+  output: lib/core/constants/theme/
+
+dependency_overrides:
+  analyzer: ^6.2.0
+  http: ^1.1.0
